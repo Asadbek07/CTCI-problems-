@@ -12,8 +12,8 @@ def solve(s):
 
 	return True
 
-print(solve("asadbek"))
-print(solve("asl"))				
+print(solve("asadbek"))  # False
+print(solve("asl"))		 # True		
 
 # Time complexity : O(N)
 # Space complexity : O(N) -> We used hash table that's why space is O(N) 
