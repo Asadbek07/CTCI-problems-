@@ -1,3 +1,5 @@
+
+# Solution with additional datastructure
 from collections import Counter
 def solve(s):
 	if len(s) > 26:
@@ -12,3 +14,6 @@ def solve(s):
 
 print(solve("asadbek"))
 print(solve("asl"))				
+
+# Time complexity : O(N)
+# Space complexity : O(N) -> We used hash table that's why space is O(N) 
