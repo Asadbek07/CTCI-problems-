@@ -2,7 +2,7 @@
 # Solution with additional datastructure
 from collections import Counter
 def solve(s):
-	if len(s) > 26:
+	if len(s) > 128:
 		return False
 
 	counts = Counter(s)
@@ -16,4 +16,17 @@ print(solve("asadbek"))  # False
 print(solve("asl"))		 # True		
 
 # Time complexity : O(N)
-# Space complexity : O(N) -> We used hash table that's why space is O(N) 
+# Space complexity : O(1) -> Because loop never iterate more than 128 characters 
+
+def solve_2(s):
+	checker = 0
+	for i in s:
+		val = ord(i) - ord('a')
+		if (checker & (1 << val) > 0):
+			return False
+
+		checker |= (1 << val)
+	return True
+	
+print(solve_2('asad'))
+print(solve_2('asd'))			
